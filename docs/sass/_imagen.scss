@@ -1,0 +1,52 @@
+.contain_imagen{
+    height:400px; 
+    display:inline-block;
+    position:relative;
+    overflow:hidden;    
+    border-radius:8px;  
+    margin:5px;
+    & .imagen { 
+        width:350px;
+        height:300px; 
+        display:block;
+        height:100%;   
+        filter: blur(20px);
+        transition-property:filter;
+        transition-duration: .5s;
+        transition-timing-function:  ease;
+        object-fit: contain;
+    }      
+    &:hover .imagen{ 
+            
+        filter:blur(0);
+    }
+     
+    & .card-texto{ 
+        width:100%;     
+        height:25%;
+        position:absolute;
+        top:0; 
+        left:0;
+        text-align:center;      
+        background:linear-gradient(to right,#C24B8E, #95105B);
+        transform:translateY(400%);
+        transition:transform .5s ease; 
+        opacity: 0.8;
+        
+    }  
+    &:hover .card-texto{  
+        transform :translateY(300%);
+
+    }
+    & .card-texto .cancion{
+        display:block;
+        color:#fff;
+        font-family:'Montserrat', sans-serif; 
+        cursor:pointer;
+        text-decoration: none;
+        text-transform:capitalize; 
+        transform:translateY(50%);
+    }   
+}          
+  
+        
